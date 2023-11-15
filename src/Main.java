@@ -1,3 +1,5 @@
+import static java.lang.Character.isUpperCase;
+
 public class Main {
 
     /**
@@ -8,9 +10,8 @@ public class Main {
      * zip(myArray1, myArray2) → {1,3,5,7,9,2,4,6,8,10,12,14,16}
      */
     public static int[] combine(int[] array1, int[] array2) {
-
-        return null;
-
+        int[] combined = combine(array1, array2);
+        return combined;
     }
 
     /**
@@ -21,9 +22,15 @@ public class Main {
      * zip(myArray1, myArray2) → {1,2,3,4,5,6,7,8,9,10}
      */
     public static int[] zip(int[] array1, int[] array2) {
-
-        return null;
-
+        int[] zippedArray = new int[0];
+        for (int i = 0; i < array1.length; i++) {
+            int index = 0;
+            index++;
+            zippedArray[index] = array2[i];
+            index++;
+        }
+        return zippedArray;
+        }
     }
 
     /**
@@ -34,9 +41,11 @@ public class Main {
      * product(myArray1, myArray2) → {2,12,30,56,90}
      */
     public static int[] product(int[] array1, int[] array2) {
-
-        return null;
-
+        int[] productArray = new int[array1.length];
+        for (int i = 0; i < array1.length; i++) {
+            productArray[i] = array1[i] * array2[i];
+        }
+        return productArray;
     }
 
     /**
@@ -56,14 +65,22 @@ public class Main {
      * capitalCount(words) → {1, 2, 2, 0}
      */
     public static int[] capitalCount(String[] words) {
-
-        return null;
-
+        int count = 0;
+        for (int i = 0; i < words.length; i++) {
+            words[i] = count(words[i]);
+        }
+        return count;
     }
 
     public static int countCapitalLetters(String word) {
-
-        return 0;
+            int count = 0;
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+                if (char c = isUpperCase(c)) {
+                    count++;
+                }
+            }
+            return count;
 
     }
 
